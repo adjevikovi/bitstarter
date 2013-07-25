@@ -22,7 +22,7 @@ var readFromFile = function(fileName){
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  response.send(readFromFile("index.html"));
+  response.send("test ato return" + readFromFile("index.html"));
 });
 
 var port = process.env.PORT || 5000;
