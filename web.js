@@ -1,9 +1,19 @@
 var express = require('express');
 var app = express();
+var fs = require('fs');
+
+var readFromFile = function(fileName){
+    fs.readFile(fileName, {encoding:utf8},function (err, data) {
+  if (err) throw err;
+  console.log(data);
+	return data;
+    });
+};
+
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  response.send('Hello World 2!');
+  response.send(readFromFile("index.html"));
 });
 
 var port = process.env.PORT || 5000;
