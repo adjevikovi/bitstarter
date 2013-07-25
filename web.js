@@ -13,7 +13,7 @@ var readFromFile = function(fileName){
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  response.send(readFromFile("/bitstarter/index.html"));
+  response.send(readFromFile("bitstarter/index.html"));
 });
 
 var port = process.env.PORT || 5000;
