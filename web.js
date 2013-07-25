@@ -1,13 +1,22 @@
 var express = require('express');
 var app = express();
 var fs = require('fs');
+var output;
+
 
 var readFromFile = function(fileName){
-    fs.readFile(fileName, function (err, data) {
-  if (err) throw err;
-  console.log(data);
-	return data.toString();
-    });
+    fs.readFileSync(fileName, 'utf8', function(err, data){
+	if(err){ 
+	    console.log(err);
+	    output = err;
+	} else{
+	    console.log(data)
+	    output = data;
+	}
+	return output;
+    }
+	
+    );
 };
 
 app.use(express.logger());
