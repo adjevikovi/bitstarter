@@ -13,10 +13,10 @@ var readFromFile = function(fileName){
 	    console.log(data)
 	    output = data;
 	}
-	return output;
     }
 	
     );
+    return output;
 };
 
 app.use(express.logger());
