@@ -6,7 +6,7 @@ var readFromFile = function(fileName){
     fs.readFile(fileName, function (err, data) {
   if (err) throw err;
   console.log(data);
-	return data;
+	return data.toString();
     });
 };
 
