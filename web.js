@@ -3,7 +3,7 @@ var app = express();
 var fs = require('fs');
 
 var readFromFile = function(fileName){
-    fs.readFile(fileName, {encoding:utf8},function (err, data) {
+    fs.readFile(fileName, function (err, data) {
   if (err) throw err;
   console.log(data);
 	return data;
