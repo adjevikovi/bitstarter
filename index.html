@@ -98,11 +98,21 @@
       .footer a {
         color: #ccccff;
       }
+
+      
+      /* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
+      div.addthis_toolbox {
+      width:180px;
+      margin: 0 auto;
+      }
+
     </style>
   </head>
   <body>
 
-    <!-- Mobile-friendly navbar adapted from example. -->
+
+
+<!--friendly navbar adapted from example. -->
     <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -195,9 +205,36 @@
           <div class="span8 offset2 social">
             <!-- Social buttons are not included in default Bootstrap. -->
             <!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
-            <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
-            <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
-          </div>
+            <!--button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button-->
+            <!--button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button-->
+
+	    <!-- AddThis Smart Layers BEGIN -->
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52135c6102fab131"></script>
+<script type="text/javascript">
+  alert("I was called :!!!");
+  addthis.layers({
+  'theme' : 'transparent',
+  'share' : {
+  'position' : 'left',
+  'numPreferredServices' : 5
+  }, 
+  'follow' : {
+  'services' : [
+  {'service': 'facebook', 'id': 'https://www.facebook.com/kapjoel.pedros'},
+  {'service': 'twitter', 'id': 'https://twitter.com/kap_joel'},
+  {'service': 'linkedin', 'id': 'ma.linkedin.com/pub/adjevi-kovi/28/b22/919'},
+          {'service': 'google_follow', 'id': '118139264759834508343'}
+	  ]
+	  },  
+	  'whatsnext' : {},  
+	  'recommended' : {
+	  'title': 'Recommended for you:'
+	  } 
+	  });
+	  </script>
+	  <!-- AddThis Smart Layers END -->
+
           </div>
         </div>
         </div>
